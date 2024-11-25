@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:noNamespaceSchemaLocation="product-schema.xsd">
+    <product>
+        <name>Smartphone</name>
+        <price>699.99</price>
+        <category>Electronics</category>
+        <availability>true</availability>
+    </product>
+    <product>
+        <name>Shirt</name>
+        <price>25.50</price>
+        <category>Clothing</category>
+        <availability>false</availability>
+    </product>
+    <product>
+        <name>Washing Machine</name>
+        <price>499.99</price>
+        <category>Home Appliances</category>
+        <availability>true</availability>
+    </product>
+</products>

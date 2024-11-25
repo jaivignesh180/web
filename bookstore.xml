@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+  <book id="b1">
+    <title>Learning XML</title>
+    <author>John Doe</author>
+    <price>29.99</price>
+  </book>
+  <book id="b2">
+    <title>Mastering XQuery</title>
+    <author>Jane Smith</author>
+    <price>49.99</price>
+  </book>
+</bookstore>
+for $book in doc("bookstore.xml")/bookstore/book
+where $book/price > 30
+return
+  <expensiveBook>
+    <title>{ $book/title }</title>
+    <price>{ $book/price }</price>
+  </expensiveBook>

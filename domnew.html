@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML to Table</title>
+</head>
+
+<body>
+    <h1>XML to Table Example</h1>
+    <button onclick="loadAndDisplayXML()">Load XML and Display Table</button>
+
+    <div id="tableContainer"></div>
+
+    <script>
+        const xmlData = `
+            <students>
+                <student>
+                    <name>John Doe</name>
+                    <gender>Male</gender>
+                    <email>john.doe@example.com</email>
+                </student>
+                <student>
+                    <name>Jane Smith</name>
+                    <gender>Female</gender>
+                    <email>jane.smith@example.com</email>
+                </student>
+                <student>
+                    <name>Sam Brown</name>
+                    <gender>Male</gender>
+                    <email>sam.brown@example.com</email>
+                </student>
+            </students>
+        `;
+
+        function loadAndDisplayXML() {
+            // Parse the XML string
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlData, "text/xml");
+
+            // Extract student data
+            const students = xmlDoc.getElementsByTagName("student");
+
+            // Create a table
+            let tableHTML = `
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            // Loop through the students and add rows to the table
+            for (let i = 0; i < students.length; i++) {
+                const name = students[i].getElementsByTagName("name")[0].textContent;
+                const gender = students[i].getElementsByTagName("gender")[0].textContent;
+                const email = students[i].getElementsByTagName("email")[0].textContent;
+
+                tableHTML += `
+                    <tr>
+                        <td>${name}</td>
+                        <td>${gender}</td>
+                        <td>${email}</td>
+                    </tr>
+                `;
+            }
+
+            // Close the table
+            tableHTML += `
+                    </tbody>
+                </table>
+            `;
+
+            // Display the table in the div
+            document.getElementById("tableContainer").innerHTML = tableHTML;
+        }
+    </script>
+</body>
+
+</html>

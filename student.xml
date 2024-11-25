@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student-report.xsl"?>
+<students>
+    <student>
+        <name>John Doe</name>
+        <subjects>
+            <subject>
+                <name>Mathematics</name>
+                <grade>85</grade>
+            </subject>
+            <subject>
+                <name>Physics</name>
+                <grade>90</grade>
+            </subject>
+            <subject>
+                <name>Chemistry</name>
+                <grade>78</grade>
+            </subject>
+        </subjects>
+    </student>
+    <student>
+        <name>Jane Smith</name>
+        <subjects>
+            <subject>
+                <name>Mathematics</name>
+                <grade>88</grade>
+            </subject>
+            <subject>
+                <name>Physics</name>
+                <grade>92</grade>
+            </subject>
+            <subject>
+                <name>Chemistry</name>
+                <grade>84</grade>
+            </subject>
+        </subjects>
+    </student>
+</students>

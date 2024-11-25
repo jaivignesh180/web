@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="products">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Product Name with a minimum length of 3 characters -->
+                            <xs:element name="name" type="xs:string">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="3"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Price as a positive decimal number -->
+                            <xs:element name="price" type="xs:decimal">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:minExclusive value="0"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Category restricted to predefined values -->
+                            <xs:element name="category">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Electronics"/>
+                                        <xs:enumeration value="Clothing"/>
+                                        <xs:enumeration value="Home Appliances"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Availability as a boolean (true/false) -->
+                            <xs:element name="availability" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
