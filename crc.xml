@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cricket SYSTEM "cricket.dtd">
+
+<cricket>
+    <batsman id="1">
+        <name>Virat</name>
+        <lastname>Kohli</lastname>
+        <age>36</age>
+        <century>81</century>
+    </batsman>
+    <batsman id="2">
+        <name>Kesho</name>
+        <lastname>Kumar</lastname>
+        <age>20</age>
+        <century>95</century>
+    </batsman>
+    <bowler id="1">
+        <name>Jasprit</name>
+        <lname>Bumrah</lname>
+        <age>30</age>
+        <wicket>40</wicket>
+    </bowler>
+    <bowler id="2">
+        <name>Kesho</name>
+        <lname>Kumar</lname>
+        <age>20</age>
+        <wicket>90</wicket>
+    </bowler>
+</cricket>

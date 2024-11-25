@@ -1,0 +1,11 @@
+<!ELEMENT cricket (batsman+,bowler+)>
+<!ELEMENT batsman (name,lastname,age,century)>
+<!ATTLIST batsman id CDATA #REQUIRED>
+<!ELEMENT bowler (name,lname,age,wicket)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT century (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT wicket (#PCDATA)>
+<!ATTLIST bowler id CDATA #REQUIRED>
